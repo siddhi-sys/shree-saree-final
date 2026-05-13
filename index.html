@@ -3,53 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shree Saree | Jabalpur</title>
+    <title>Shree Saree | Heritage Silks Jabalpur</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        h1, h2, .brand { font-family: 'Playfair Display', serif; }
-        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .brand { font-family: 'Playfair Display', serif; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
     </style>
 </head>
 <body class="bg-stone-50 text-stone-900">
-    <nav class="flex justify-between items-center p-6 bg-white shadow-sm sticky top-0 z-50">
+
+    <!-- Navigation -->
+    <nav class="flex justify-between items-center px-6 py-4 bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <div class="brand text-2xl font-bold text-red-900">Shree Saree</div>
-        <div class="space-x-8 text-sm uppercase tracking-widest font-medium">
-            <a href="#home" class="hover:text-red-700">Home</a>
-            <a href="#collection" class="hover:text-red-700">Collection</a>
-            <a href="#contact" class="hover:text-red-700">Contact</a>
+        <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-semibold">
+            <a href="#home" class="hover:text-red-700 transition">Home</a>
+            <a href="#about" class="hover:text-red-700 transition">Our Story</a>
+            <a href="#collection" class="hover:text-red-700 transition">Collection</a>
+            <a href="#contact" class="hover:text-red-700 transition">Visit Us</a>
         </div>
     </nav>
-    <section id="home" class="relative h-[60vh] flex items-center justify-center text-center bg-red-900 text-white">
-        <div class="relative z-10 px-4">
-            <h1 class="text-5xl md:text-6xl font-bold mb-4">Shree Saree Jabalpur</h1>
-            <p class="text-xl italic opacity-90">Authentic Heritage Silks & Handlooms</p>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-[85vh] flex items-center justify-center text-center bg-stone-900">
+        <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=1500" class="absolute inset-0 w-full h-full object-cover opacity-50">
+        <div class="relative z-10 text-white px-4">
+            <span class="uppercase tracking-[0.3em] text-sm mb-4 block">Est. In Jabalpur</span>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Timeless Heritage,<br>Woven for You.</h1>
+            <a href="#collection" class="inline-block border-2 border-white px-10 py-3 text-sm uppercase tracking-widest hover:bg-white hover:text-stone-900 transition font-bold">Explore Collection</a>
         </div>
     </section>
-    <section id="collection" class="py-20 px-6 max-w-7xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12">Our Signature Collection</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div class="bg-white p-3 shadow-md">
-                <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=500" class="w-full h-80 object-cover">
-                <p class="mt-4 font-bold text-xl">Bridal Kanjeevaram</p>
+
+    <!-- About Section (New!) -->
+    <section id="about" class="py-24 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl mb-8">Our Story</h2>
+            <p class="text-lg text-stone-600 leading-relaxed italic">
+                "Shree Saree began with a simple mission: to bring the finest handloom heritage of India to the heart of Jabalpur. For years, we have curated exclusive silks and weaves that celebrate the strength and elegance of the modern woman."
+            </p>
+        </div>
+    </section>
+
+    <!-- Expanded Collection Grid -->
+    <section id="collection" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+            <div>
+                <h2 class="text-4xl mb-2 text-red-950">The Boutique Gallery</h2>
+                <p class="text-stone-500">Handpicked selections for every occasion.</p>
             </div>
-            <div class="bg-white p-3 shadow-md">
-                <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=500" class="w-full h-80 object-cover">
-                <p class="mt-4 font-bold text-xl">Banarasi Silk</p>
+            <span class="text-stone-400 hidden md:block uppercase tracking-widest text-xs">Scroll to explore &darr;</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- Saree 1 -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden mb-4 bg-stone-200 aspect-[3/4]">
+                    <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <h3 class="text-xl font-bold">Kanjeevaram Pattu</h3>
+                <p class="text-stone-500 text-sm italic">Bridal Red & Gold</p>
             </div>
-            <div class="bg-white p-3 shadow-md">
-                <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=500" class="w-full h-80 object-cover">
-                <p class="mt-4 font-bold text-xl">Designer Wear</p>
+            <!-- Saree 2 -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden mb-4 bg-stone-200 aspect-[3/4]">
+                    <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <h3 class="text-xl font-bold">Banarasi Silk</h3>
+                <p class="text-stone-500 text-sm italic">Hand-woven in Varanasi</p>
+            </div>
+            <!-- Saree 3 -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden mb-4 bg-stone-200 aspect-[3/4]">
+                    <img src="https://images.unsplash.com/photo-1610189012906-40788321034c?w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <h3 class="text-xl font-bold">Chanderi Cotton</h3>
+                <p class="text-stone-600 text-sm italic">Lightweight elegance</p>
+            </div>
+             <!-- Saree 4 -->
+             <div class="group cursor-pointer">
+                <div class="overflow-hidden mb-4 bg-stone-200 aspect-[3/4]">
+                    <img src="https://images.unsplash.com/photo-1609357601569-87340b0808c1?w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <h3 class="text-xl font-bold">Organza Floral</h3>
+                <p class="text-stone-600 text-sm italic">Modern party wear</p>
+            </div>
+             <!-- Saree 5 -->
+             <div class="group cursor-pointer">
+                <div class="overflow-hidden mb-4 bg-stone-200 aspect-[3/4]">
+                    <img src="https://images.unsplash.com/photo-1610030469668-935142b9c7a6?w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <h3 class="text-xl font-bold">Paithani Silk</h3>
+                <p class="text-stone-600 text-sm italic">Traditional Maharashtrian</p>
+            </div>
+             <!-- Saree 6 -->
+             <div class="group cursor-pointer">
+                <div class="overflow-hidden mb-4 bg-stone-200 aspect-[3/4]">
+                    <img src="https://images.unsplash.com/photo-1542332213-31f87348057f?w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <h3 class="text-xl font-bold">Tussar Silk</h3>
+                <p class="text-stone-600 text-sm italic">Earthy hand-drawn motifs</p>
             </div>
         </div>
     </section>
-    <footer id="contact" class="bg-stone-100 py-20 text-center">
-        <h2 class="text-3xl mb-4 font-serif">Visit Us in Jabalpur</h2>
-        <p class="text-lg text-stone-600 mb-8 font-medium">Main Market, Jabalpur, Madhya Pradesh</p>
-        <button class="bg-red-800 text-white px-10 py-4 rounded-sm uppercase tracking-widest font-bold">WhatsApp Inquiry</button>
+
+    <!-- Detailed Footer / Contact -->
+    <footer id="contact" class="bg-stone-900 text-stone-300 py-24 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl text-white mb-6">Visit Our Store</h2>
+                <div class="space-y-6 text-lg">
+                    <p>📍 <strong class="text-white">Address:</strong><br> Shop No. 12, Main Market, Sadar Bazar,<br> Jabalpur, Madhya Pradesh 482001</p>
+                    <p>📞 <strong class="text-white">Contact:</strong><br> +91 98765 43210</p>
+                    <p>⏰ <strong class="text-white">Hours:</strong><br> Mon - Sun: 10:30 AM - 9:00 PM</p>
+                </div>
+            </div>
+            <div class="bg-stone-800 p-8 rounded-lg">
+                <h3 class="text-2xl text-white mb-6">Inquiry & Appointments</h3>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Your Name" class="w-full p-3 bg-stone-700 border-none rounded text-white">
+                    <input type="email" placeholder="Your Email" class="w-full p-3 bg-stone-700 border-none rounded text-white">
+                    <textarea placeholder="Tell us what you are looking for..." class="w-full p-3 bg-stone-700 border-none rounded text-white h-32"></textarea>
+                    <button type="button" onclick="alert('Thank you! Our team in Jabalpur will contact you.')" class="w-full bg-red-800 hover:bg-red-700 text-white py-4 font-bold tracking-widest transition">SEND INQUIRY</button>
+                </form>
+            </div>
+        </div>
+        <div class="mt-24 border-t border-stone-800 pt-8 text-center text-xs tracking-[0.2em] uppercase">
+            &copy; 2026 Shree Saree Jabalpur. Designed by Siddhi Sharma.
+        </div>
     </footer>
-    <div class="bg-white py-6 text-center text-stone-400 text-xs tracking-widest">
-        &copy; 2026 Shree Saree | Built for Project Submission
-    </div>
+
 </body>
 </html>
